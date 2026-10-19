@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>ჩემი დავალებები</h1>
+        
+        <div id="date-time" class="date-time"></div>
+
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="შეიყვანეთ ახალი დავალება..." autocomplete="off">
+            <button type="submit">დამატება</button>
+        </form>
+
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="ძებნა...">
+            <select id="filter-select">
+                <option value="all">ყველა</option>
+                <option value="completed">შესრულებული</option>
+                <option value="pending">შეუსრულებელი</option>
+            </select>
+            <button id="sort-btn" type="button">სორტირება</button>
+        </div>
+
+        <button id="fetch-btn" class="fetch-btn" type="button">სერვერიდან წამოღება (API)</button>
+
+        <div id="stats" class="stats"></div>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
